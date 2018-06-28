@@ -25,7 +25,7 @@ user_input = user_input.to_i
 user_input = user_input - 1
 end
 
-def move(board, position = 0, char)
+def move(board, position = 0, char = "X")
 board[position] = char
 end
 
@@ -146,7 +146,7 @@ end
 =end
 
 def play(board)
-  while !over?(board)
+  until !over?(board)
     turn(board)
   end
   if won?(board)
